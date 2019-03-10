@@ -1,5 +1,5 @@
 {
-  "name": "extract-react-types",
+  "name": "@bebraw/extract-react-types",
   "version": "0.16.0",
   "main": "src/index.js",
   "repository": "atlassian/extract-react-types",
