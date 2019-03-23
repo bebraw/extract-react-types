@@ -956,6 +956,7 @@ converters.TSTypeReference = (path, context) /*: K.Generic */ => {
     return {
       kind: 'generic',
       typeParams: convert(typeParameters, context),
+      key: convert(path.get('key'), context),
       value: convert(path.get('typeName'), context)
     };
   }
@@ -1454,6 +1455,7 @@ function getContext(
     throw new Error('typeSystem must be either "flow" or "typescript"');
   }
 
+  /* $FlowFixMe - need to update types in babylon-options */
   let parserOpts = createBabylonOptions({
     stage: 2,
     plugins
